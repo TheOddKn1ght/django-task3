@@ -1,0 +1,17 @@
+main > .container {
+    padding: 60px 15px 0;
+  }
+  
+ .tags{
+    max-width: 100px;
+    font-size: 25px;
+    gap: 10px;
+  }
+  
+  .best-members-section{
+    margin-top: 20px;
+  }
+  
+.form-group{
+    padding: 10px;
+  }

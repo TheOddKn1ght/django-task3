@@ -1,0 +1,83 @@
+{%extends 'layouts/base.html'%}
+
+
+{% block content %}
+
+  <h1>Fisrt Question</h1>
+  <div class="row question">
+    <div class="col-3 d-flex flex-column align-items-start" style="padding-left: 10px;">
+      <img src="../static/img/default_avatar.png" alt="Failed loading user picture" class="question-image">
+      <div class="btn-group mt-auto">
+          <button class="btn btn-outline-primary upvote-button">
+              Upvote
+          </button>
+          <button class="btn btn-outline-danger downvote-button">
+              Downvote
+          </button>
+      </div>
+    </div>
+    <div class="col-9" style="padding-right: 5px;">
+      <div class="question-title">{{ question.title }}</div>
+      <div class="question-text"> {{ question.content }}
+      </div>
+      <div class="question-footer">
+        <span class="badge bg-secondary footer-tags">Tag1, Tag2, Tag3</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-9">
+    <div class="row answer">
+      <div class="col-3">
+        <img src="../static/img/default_avatar.png" alt="Failed loading user picture" class="answer-image">
+        
+        <div class="btn-group mt-auto">
+          <button class="btn btn-outline-primary upvote-button">
+              Upvote
+          </button>
+          <button class="btn btn-outline-danger downvote-button">
+              Downvote
+          </button>
+          
+       </div>
+      </div>
+      <div class="col-9 answer-text">
+        I have no idea how to solve your problem, dude
+      </div>
+      <div class="answer-footer">
+        <span class="badge bg-secondary approval">Not approved</span>
+      </div>
+    </div>
+    <div class="row answer">
+      <div class="col-3">
+        <img src="../static/img/default_avatar.png" alt="Failed loading user picture" class="answer-image">
+        
+        <div class="btn-group mt-auto">
+          <button class="btn btn-outline-primary upvote-button">
+              Upvote
+          </button>
+          <button class="btn btn-outline-danger downvote-button">
+              Downvote
+          </button>
+          
+       </div>
+      </div>
+      <div class="col-9 answer-text">
+        Skill issue
+      </div>
+      <div class="answer-footer">
+        <span class="badge bg-success approval">Approved</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row inpAns" style="margin-top: 20px;">
+    <div class="mb-3">
+        <label for="questionTextArea" class="form-label">Your answer</label>
+        <textarea placeholder="Enter your answer here" class="form-control" id="questionTextArea" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary col-2 mb-5 btn-answer">Answer</button>
+</div>
+
+{% endblock %}

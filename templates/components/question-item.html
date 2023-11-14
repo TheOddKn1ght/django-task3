@@ -1,0 +1,25 @@
+{% load static %}
+
+<div class="row question">
+    <div class="col-3 d-flex flex-column align-items-start" style="padding-left: 10px;">
+      <img src="{% static 'img/default_avatar.png' %}" alt="Failed loading user picture" class="question-image">
+      <div class="btn-group mt-auto">
+          <button class="btn btn-outline-primary upvote-button">
+              Upvote
+          </button>
+          <button class="btn btn-outline-danger downvote-button">
+              Downvote
+          </button>
+      </div>
+    </div>
+    <div class="col-9" style="padding-right: 5px;">
+      <div class="question-title"><a href="{% url 'question' question_id=question.id %}">{{ question.title }}</a></div>
+      <div class="question-text">{{ question.content }}</div>
+      <div class="question-footer">
+        <button type="button" class="btn btn-primary">
+          answers <span class="badge badge-light">4</span>
+        </button>
+        <span class="badge bg-secondary footer-tags">Tag1, Tag2, Tag3</span>
+      </div>
+    </div>
+  </div>
