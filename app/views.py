@@ -4,14 +4,6 @@ from django.core.paginator import Paginator
 from .models import Question
 
 
-QUESTIONS = [
-        {
-            'id':i,
-            'title': f'Question {i}',
-            'content': f'long ipsum {i}'
-        } for i in range(100)
-
-    ]
 
 def paginate(objects, page, per_page=10):
     paginator = Paginator(objects, per_page)
@@ -27,7 +19,7 @@ def index(request):
 
 
 def list_best_questions(request):
-    questions = Question.objects.get_best_questions() #TODO
+    questions = Question.objects.get_best_questions()
     paginator = Paginator(questions, 10)  
     page = request.GET.get('page')
     questions = paginator.get_page(page)

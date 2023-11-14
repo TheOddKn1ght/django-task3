@@ -78,8 +78,15 @@ WSGI_APPLICATION = 'askanything.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'name',         
+        'USER': 'user',         
+        'PASSWORD': 'password', 
+        'HOST': 'db',                         
+        'PORT': '3306',                       
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+        },
     }
 }
 
@@ -128,3 +135,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+
+DOCKER_IMAGE_NAME = 'your-django-image'

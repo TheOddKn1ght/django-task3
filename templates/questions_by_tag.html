@@ -1,0 +1,14 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Questions for tag {{ tag.name }}</h1>
+
+{% for question in questions %}
+
+{% include 'components/question-item.html' %}
+
+{% endfor %}
+ 
+{% include 'components/paginator.html' %}
+{% endblock %}
