@@ -20,6 +20,8 @@ from app import views
 
 urlpatterns = [
     path('', views.index, name="index"),
+    path('best-questions/', views.list_best_questions, name='best_questions'),
+    path('tag/<int:tag_id>/', views.list_questions_by_tag, name='questions_by_tag'),
     path('question/<int:question_id>', views.question, name="question"),
     path('admin/', admin.site.urls),
     path('settings/', views.settings, name="settings"),
