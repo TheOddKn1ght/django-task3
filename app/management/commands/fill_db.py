@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 from django.contrib.auth.models import User
-from your_app.models import Question, Answer, Tag, Like, Profile
+from app.models import Question, Answer, Tag, Like, Profile
 from faker import Faker
 import random
 
